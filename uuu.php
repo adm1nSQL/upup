@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['fileToUpload'])) {
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    // 可自行添加更多所支持的文件类型
     $allowed_file_types = array('jpg', 'png', 'jpeg', 'gif', 'rar', 'zip', 'xlsx');
 
     // 文件类型验证
