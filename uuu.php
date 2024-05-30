@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['access_password'])) {
 }
 
 if (!isset($_SESSION['access_granted']) || $_SESSION['access_granted'] !== true) {
-    header('Location: index.php');
+    header('Location: index.html');
     exit();
 }
 
