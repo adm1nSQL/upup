@@ -39,13 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['fileToUpload'])) {
 
     // 文件大小限制
     if ($_FILES["fileToUpload"]["size"] > 500000000) { // 500MB
-        $upload_result = "抱歉，文件太。";
+        $upload_result = "抱歉，文件太大";
         $uploadOk = 0;
     }
 
     // 检查 $uploadOk 是否设置为 0
     if ($uploadOk == 0) {
-        $upload_result = "抱歉，您的文件未上。";
+        $upload_result = "抱歉，您的文件未上";
     } else {
         $unique_name = uniqid('', true) . '.' . $imageFileType;
         $unique_file_path = $target_dir . $unique_name;
